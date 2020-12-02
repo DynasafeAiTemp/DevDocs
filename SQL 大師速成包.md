@@ -107,7 +107,7 @@
 * 語法
 
   ```mysql
-  INSERT INTO users VALUES (
+  INSERT INTO 資料表名稱 VALUES (
       數值一, 數值二, 數值三
   );
   ```
