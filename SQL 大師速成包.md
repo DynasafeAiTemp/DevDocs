@@ -9,7 +9,7 @@
 * 語法
 
     ```mysql
-    CREATE DATABASE `資料庫名稱` COLLATE `編碼`;
+    CREATE DATABASE 資料庫名稱 COLLATE 編碼;
     ```
 
 * 範例
@@ -25,10 +25,10 @@
 * 語法
 
     ```mysql
-    CREATE TABLE `資料表名稱` (
-        `欄位名稱1` `欄位屬性1`,
-        `欄位名稱2` `欄位屬性2`,
-        `欄位名稱3` `欄位屬性3`
+    CREATE TABLE 資料表名稱 (
+        欄位名稱1 欄位屬性1,
+        欄位名稱2 欄位屬性2,
+        欄位名稱3 欄位屬性3
     );
     ```
 
