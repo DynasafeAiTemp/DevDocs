@@ -15,16 +15,18 @@
 * 語法
 
     ```mysql
-    CREATE DATABASE 資料庫名稱 COLLATE 編碼;
+    CREATE DATABASE 資料庫名稱
+    COLLATE 編碼;
     ```
 
 * 範例
 
     ```mysql
-    CREATE DATABASE demo_shop COLLATE utf8_unicode_ci;
+    CREATE DATABASE demo_shop
+    COLLATE utf8_unicode_ci;
     ```
 
-[回到目錄](#sql-大師速成包)
+[返回目錄](#sql-大師速成包)
 
 ---
 
@@ -34,9 +36,9 @@
 
     ```mysql
     CREATE TABLE 資料表名稱 (
-        欄位名稱1 欄位屬性1,
-        欄位名稱2 欄位屬性2,
-        欄位名稱3 欄位屬性3
+        欄位名稱一 欄位屬性一,
+        欄位名稱二 欄位屬性二,
+        欄位名稱三 欄位屬性三
     );
     ```
 
@@ -50,7 +52,7 @@
     );
     ```
 
-[回到目錄](#sql-大師速成包)
+[返回目錄](#sql-大師速成包)
 
 ---
 
@@ -72,7 +74,7 @@
   DROP TABLE users;
   ```
 
-[回到目錄](#sql-大師速成包)
+[返回目錄](#sql-大師速成包)
 
 ---
 
@@ -94,4 +96,26 @@
   ALTER TABLE users DROP age;
   ```
 
-[回到目錄](#sql-大師速成包)
+[返回目錄](#sql-大師速成包)
+
+---
+
+### 插入資料
+
+* 語法
+
+  ```mysql
+  INSERT INTO users VALUES (
+      數值一, 數值二, 數值三
+  );
+  ```
+
+* 範例
+
+  ```mysql
+  INSERT INTO users VALUES (
+      'Jack', 20, 'Male'
+  );
+  ```
+
+  
