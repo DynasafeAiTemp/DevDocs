@@ -8,9 +8,9 @@
 
 * 語法
 
-	```mysql
-	CREATE DATABASE 資料庫名稱 COLLATE 編碼;
-	```
+    ```mysql
+    CREATE DATABASE 資料庫名稱 COLLATE 編碼;
+    ```
 
 * 範例
 
