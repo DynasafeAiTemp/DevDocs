@@ -1,6 +1,10 @@
 # SQL 大師速成包
 
-
+> * [基本語法](#基本語法)
+>   * [創建資料庫](#創建資料庫)
+>   * [創建資料表](#創建資料表)
+>   * [刪除資料庫 / 資料表](#刪除資料庫-/-資料表)
+>   * [新增 / 刪除欄位](#新增-/-刪除欄位)
 
 ## 基本語法
 
@@ -19,6 +23,8 @@
     ```
 
 [回到目錄](#sql-大師速成包)
+
+---
 
 ### 創建資料表
 
@@ -41,5 +47,49 @@
         gender VARCHAR(6)
     );
     ```
+
+[回到目錄](#sql-大師速成包)
+
+---
+
+### 刪除資料庫 / 資料表
+
+* 語法
+
+  ```mysql
+  DROP DATABASE/TABLE 資料庫/資料表名稱;
+  ```
+
+* 範例
+
+  ```mysql
+  DROP DATABASE demo_shop;
+  ```
+
+  ```mysql
+  DROP TABLE users;
+  ```
+
+[回到目錄](#sql-大師速成包)
+
+---
+
+### 新增 / 刪除欄位
+
+* 語法
+
+  ```mysql
+  ALTER TABLE 資料表名稱 ADD/DROP 欄位名稱;
+  ```
+
+* 範例
+
+  ```mysql
+  ALTER TABLE users ADD profile TEXT;
+  ```
+
+  ```mysql
+  ALTER TABLE users DROP age;
+  ```
 
 [回到目錄](#sql-大師速成包)
