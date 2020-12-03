@@ -126,3 +126,21 @@
 
 ### 查詢資料
 
+* 語法
+
+  ```mysql
+  SELECT 欄位名稱 FROM 資料表名稱;
+  ```
+
+* 範例
+
+  ```mysql
+  SELECT * FROM users;
+  ```
+
+  ```mysql
+  SELECT age
+  FROM users;
+  ```
+
+[返回目錄](#sql-大師速成包)
