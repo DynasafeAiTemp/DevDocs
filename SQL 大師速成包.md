@@ -1,7 +1,5 @@
 # SQL 大師速成包
 
-*參考來源：[簡明 SQL 資料庫語法入門教學 (techbridge.cc)](https://blog.techbridge.cc/2020/02/09/sql-basic-tutorial/)*
-
 > * [基本語法](#基本語法)
 >   * [創建資料庫](#創建資料庫)
 >   * [創建資料表](#創建資料表)
@@ -9,6 +7,7 @@
 >   * [新增 / 刪除欄位](#新增--刪除欄位)
 >   * [插入資料](#插入資料)
 >   * [查詢資料](#查詢資料)
+> * [參考來源](#參考來源)
 
 ## 基本語法
 
@@ -142,5 +141,12 @@
   SELECT age
   FROM users;
   ```
+
+[返回目錄](#sql-大師速成包)
+
+## 參考來源
+
+* *[簡明 SQL 資料庫語法入門教學 (techbridge.cc)](https://blog.techbridge.cc/2020/02/09/sql-basic-tutorial/)*
+* *[SQL 語法 Syntax - SQL 語法教學 Tutorial (fooish.com)](https://www.fooish.com/sql/syntax.html)*
 
 [返回目錄](#sql-大師速成包)
