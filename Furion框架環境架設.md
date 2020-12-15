@@ -1,6 +1,5 @@
 # 【.NET 5 | Furion】資料庫連接
 
-
 ## 架設Furion環境
 
 以 Visual Studio 建立一空白方案。
@@ -19,6 +18,7 @@
 ![003.png (1025×630) (raw.githubusercontent.com)](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/003.png)
 
 建立後刪除附加的 `.cs` 檔。
+
 ![004.png (261×292) (raw.githubusercontent.com)](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/004.png)
 
 再新增一 `ASP.NET Core Web應用程式` 專案。
@@ -53,11 +53,11 @@
 
 **重建解決方案**
 
-![image-20201214175740182](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20201214175740182.png)
+![010]()
 
 將Furion.Web.Entry設為啟動專案
 
-![image-20201215144327023](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20201215144327023.png)
+![011]()
 
 於*Furion.Web.Entry/Program.cs*中添加`Inject()`
 
@@ -82,7 +82,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ​	在Configure中添加`app.UseInject()`
 
-![image-20201214180211153](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20201214180211153.png)
+![012]()
 
 於Furion.Web.Core新增一類別, 命名為`FurionWebCoreStartup.cs`
 
@@ -170,7 +170,7 @@ namespace Furion.Web.Core
 
 `dbsetting.json`結構描述設定為https://json.schemastore.org/appsetting
 
-![image-20201215140736166](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20201215140736166.png)
+![013]()
 
 *Furion.EntityFramework.Core/dbsetting.json*
 
@@ -229,7 +229,7 @@ namespace Furion.EntityFramework.Core
 ```
 
 在Furion.EntituFramework.Core安裝套件Microsoft.EntityFrameworkCore.<u>SqlServer</u>(依據連接的資料庫做更改)
-![image-20201215103935324](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20201215103935324.png)
+![014]()
 
 ### 資料庫上下文定位器
 
@@ -258,8 +258,8 @@ namespace Furion.Core
 4. 輸入 `&"C:\Users\user\source\repos\Furion_demo\Furion.Core\tools\cli.ps1"` (cli.ps1之完整路徑位置)
 
 5. 輸入G&rarr;選擇連接字串&rarr;加載數據庫和視圖&rarr;選擇資料庫&rarr;立即生成&rarr;選擇Entity資料夾
-![image-20201215143003897](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20201215143003897.png)
-![image-20201215141008351](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20201215141008351.png)
+![015]()
+![016]()
 
   生成後腳本會自動在Entity資料夾內生成`.cs`檔
 
@@ -338,16 +338,16 @@ Furion.Application右鍵 &rarr;屬性&rarr;建置&rarr;打勾XML文件檔案&rar
 
 **執行**
 
-![image-20201215144911120](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20201215144911120.png)
+![017]()
 
 在網址後輸入`/api`
 
-![image-20201215145027987](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20201215145027987.png)
+![018]()
 
 ### Swagger版面設計
 
 *Furion.Application*新增`app.json`
 
-![image-20201215151312407](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20201215151312407.png)
+![019]()
 
-![image-20201215151640316](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20201215151640316.png)
+![020]()
