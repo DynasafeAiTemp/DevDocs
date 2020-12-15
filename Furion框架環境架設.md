@@ -19,9 +19,7 @@
 
 建立後刪除附加的 `.cs` 檔。
 
-<center>
 ![004.png (261×292) (raw.githubusercontent.com)](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/004.png)
-</center>
 
 再新增一 `ASP.NET Core Web應用程式` 專案。
 
