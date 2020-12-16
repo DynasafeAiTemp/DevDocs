@@ -31,16 +31,16 @@
 
 點擊各個專案並將版本改為 `net5.0`
 
-![007](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/007.png)
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/007.png)
 
-![008](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/008.png)
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/008.png)
 
 解決方案&rarr;右鍵&rarr;**重建方案**
 右鍵 `Furion.Application `加入專案參考，增加 `Furion.Core`
 
-![009](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/010.png)
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/009.png)
 
-![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/011.png)
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/010.png)
 
 其餘專案參考如下：
 
@@ -55,11 +55,11 @@
 
 **重建解決方案**
 
-![010]()
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/012.png)
 
 將Furion.Web.Entry設為啟動專案
 
-![011]()
+![]()
 
 於*Furion.Web.Entry/Program.cs*中添加`Inject()`
 
@@ -84,7 +84,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ​	在Configure中添加`app.UseInject()`
 
-![012]()
+![]()
 
 於Furion.Web.Core新增一類別, 命名為`FurionWebCoreStartup.cs`
 
@@ -172,7 +172,7 @@ namespace Furion.Web.Core
 
 `dbsetting.json`結構描述設定為https://json.schemastore.org/appsetting
 
-![013]()
+![]()
 
 *Furion.EntityFramework.Core/dbsetting.json*
 
@@ -231,7 +231,7 @@ namespace Furion.EntityFramework.Core
 ```
 
 在Furion.EntituFramework.Core安裝套件Microsoft.EntityFrameworkCore.<u>SqlServer</u>(依據連接的資料庫做更改)
-![014]()
+![]()
 
 ### 資料庫上下文定位器
 
@@ -260,8 +260,8 @@ namespace Furion.Core
 4. 輸入 `&"C:\Users\user\source\repos\Furion_demo\Furion.Core\tools\cli.ps1"` (cli.ps1之完整路徑位置)
 
 5. 輸入G&rarr;選擇連接字串&rarr;加載數據庫和視圖&rarr;選擇資料庫&rarr;立即生成&rarr;選擇Entity資料夾
-![015]()
-![016]()
+![]()
+![]()
 
   生成後腳本會自動在Entity資料夾內生成`.cs`檔
 
@@ -340,16 +340,16 @@ Furion.Application右鍵 &rarr;屬性&rarr;建置&rarr;打勾XML文件檔案&rar
 
 **執行**
 
-![017]()
+![]()
 
 在網址後輸入`/api`
 
-![018]()
+![]()
 
 ### Swagger版面設計
 
 *Furion.Application*新增`app.json`
 
-![019]()
+![]()
 
-![020]()
+![]()
