@@ -55,11 +55,11 @@
 
 **重建解決方案**
 
-![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/012.png)
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/011.png)
 
 將Furion.Web.Entry設為啟動專案
 
-![]()
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/012.png)
 
 於*Furion.Web.Entry/Program.cs*中添加`Inject()`
 
@@ -84,7 +84,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ​	在Configure中添加`app.UseInject()`
 
-![]()
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/013.png)
 
 於Furion.Web.Core新增一類別, 命名為`FurionWebCoreStartup.cs`
 
@@ -172,7 +172,7 @@ namespace Furion.Web.Core
 
 `dbsetting.json`結構描述設定為https://json.schemastore.org/appsetting
 
-![]()
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/014.png)
 
 *Furion.EntityFramework.Core/dbsetting.json*
 
