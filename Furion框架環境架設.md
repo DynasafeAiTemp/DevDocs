@@ -29,14 +29,12 @@
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/006.png)
 
-點擊各個專案並將版本改為 `net5.0`
+點擊各個專案並將版本改為 `net5.0`。
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/007.png)
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/008.png)
-
-解決方案&rarr;右鍵&rarr;**重建方案**
-右鍵 `Furion.Application `加入專案參考，增加 `Furion.Core`
+重建方案後，右鍵 `Furion.Application ` 加入專案參考，增加 `Furion.Core`。
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/009.png)
 
@@ -44,24 +42,24 @@
 
 其餘專案參考如下：
 
-- `Furion.Application`：添加 `Furion.Core` 參考
-- `Furion.Database.Migrations`：添加 `Furion.EntityFramework.Core `參考
-- `Furion.EntityFramework.Core`：添加` Furion.Core` 參考
-- `Furion.Web.Core`：添加` Furion.Application`、`Furion.Database.Migrations` 參考
-- `Furion.Web.Entry`：添加 `Furion.Web.Core` 參考
+- `Furion.Application`：添加 `Furion.Core` 參考。
+- `Furion.Database.Migrations`：添加 `Furion.EntityFramework.Core ` 參考。
+- `Furion.EntityFramework.Core`：添加 ` Furion.Core` 參考。
+- `Furion.Web.Core`：添加 ` Furion.Application`、`Furion.Database.Migrations` 參考。
+- `Furion.Web.Entry`：添加 `Furion.Web.Core` 參考。
 
-在Furion.Core&rarr;右鍵&rarr;管理NuGet套件&rarr;安裝Furion
-在Furion.Web.Entry&rarr;右鍵&rarr;管理NuGet套件&rarr;安裝Microsoft.EntityFrameworkCore.Tools
+右鍵 `Furion.Core`→`管理NuGet套件`→安裝 `Furion`。
+右鍵 `Furion.Web.Entry`→`管理NuGet套件`→安裝 `Microsoft.EntityFrameworkCore.Tools`。
 
-**重建解決方案**
+### 重建解決方案
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/011.png)
 
-將Furion.Web.Entry設為啟動專案
+將 `Furion.Web.Entry` 設為啟動專案。
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/012.png)
 
-於*Furion.Web.Entry/Program.cs*中添加`Inject()`
+* Furion.Web.Entry\Program.cs，添加 `Inject()`。
 
 ```c#
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -72,8 +70,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
                 });
 ```
 
-於*Furion.Web.Entry/Startup.cs*中
-​    在`ConfigureServices`中添加`AddInject()`
+* Furion.Web.Entry\Startup.cs，在 `ConfigureServices` 中添加 `AddInject()`。
 
 ```c#
 public void ConfigureServices(IServiceCollection services)
@@ -82,13 +79,11 @@ public void ConfigureServices(IServiceCollection services)
         }
 ```
 
-​	在Configure中添加`app.UseInject()`
+* Furion.Web.Entry\Startup.cs，在 `Configure` 中添加 `app.UseInject()`。
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/013.png)
 
-於Furion.Web.Core新增一類別, 命名為`FurionWebCoreStartup.cs`
-
-改變`Startup.cs`與`FurionWebCoreStartup.cs`的程式碼如下
+於 `Furion.Web.Core` 新增一類別, 命名為 `FurionWebCoreStartup.cs`，並依S下方指示修改 `Startup.cs` 與 `FurionWebCoreStartup.cs` ：
 
 * Furion.Web.Entry\Startp.cs
 
@@ -117,7 +112,7 @@ namespace Furion.Web.Entry
 }
 ```
 
-*Furion.Web.Core/FurionWebCoreStartup.cs*
+* Furion.Web.Core/FurionWebCoreStartup.cs
 
 ```c#
 using Microsoft.AspNetCore.Builder;
@@ -168,7 +163,7 @@ namespace Furion.Web.Core
 
 ### 配置連接字串
 
-在Furion.EntityFramework.Core新建檔案`FurDbcontext.cs`和.josn檔`dbsetting.json`
+在 `Furion.EntityFramework.Core` 新建檔案 `FurDbcontext.cs` 和 `dbsetting.json`。
 
 `dbsetting.json`結構描述設定為https://json.schemastore.org/appsetting
 
@@ -231,7 +226,7 @@ namespace Furion.EntityFramework.Core
 ```
 
 在Furion.EntituFramework.Core安裝套件Microsoft.EntityFrameworkCore.<u>SqlServer</u>(依據連接的資料庫做更改)
-![]()
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/015.png)
 
 ### 資料庫上下文定位器
 
@@ -255,13 +250,13 @@ namespace Furion.Core
 
 2. 於Furion的Github下載tools資料夾並放在專案的Furion.Core的資料夾
 
-3. 工具&rarr;NuGet套件管理員&rarr;套件管理器主控台&rarr;預設專案設定為Furion.Core
+3. 工具→NuGet套件管理員→套件管理器主控台→預設專案設定為Furion.Core
 
 4. 輸入 `&"C:\Users\user\source\repos\Furion_demo\Furion.Core\tools\cli.ps1"` (cli.ps1之完整路徑位置)
 
-5. 輸入G&rarr;選擇連接字串&rarr;加載數據庫和視圖&rarr;選擇資料庫&rarr;立即生成&rarr;選擇Entity資料夾
-![]()
-![]()
+5. 輸入G→選擇連接字串→加載數據庫和視圖→選擇資料庫→立即生成→選擇Entity資料夾
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/016.png)
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/017.png)
 
   生成後腳本會自動在Entity資料夾內生成`.cs`檔
 
@@ -334,22 +329,24 @@ namespace Furion.Application
 }
 ```
 
-Furion.Application右鍵 &rarr;屬性&rarr;建置&rarr;打勾XML文件檔案&rarr;名為Furion.Application.xml
+Furion.Application右鍵 →屬性→建置→打勾XML文件檔案→名為Furion.Application.xml
+
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/018.png)
 
 **重建方案**
 
 **執行**
 
-![]()
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/019.png)
 
 在網址後輸入`/api`
 
-![]()
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/020.png)
 
 ### Swagger版面設計
 
 *Furion.Application*新增`app.json`
 
-![]()
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/021.png)
 
-![]()
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/022.png)
