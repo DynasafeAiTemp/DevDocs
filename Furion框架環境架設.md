@@ -34,7 +34,7 @@
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/007.png)
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/008.png)
-重建方案後，右鍵 `Furion.Application ` 加入專案參考，增加 `Furion.Core`。
+重建方案後，右鍵 `Furion.Application` 加入專案參考，增加 `Furion.Core`。
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/009.png)
 
@@ -43,12 +43,13 @@
 其餘專案參考如下：
 
 - `Furion.Application`：添加 `Furion.Core` 參考。
-- `Furion.Database.Migrations`：添加 `Furion.EntityFramework.Core ` 參考。
+- `Furion.Database.Migrations`：添加 `Furion.EntityFramework.Core` 參考。
 - `Furion.EntityFramework.Core`：添加 ` Furion.Core` 參考。
 - `Furion.Web.Core`：添加 ` Furion.Application`、`Furion.Database.Migrations` 參考。
 - `Furion.Web.Entry`：添加 `Furion.Web.Core` 參考。
 
 右鍵 `Furion.Core`→`管理NuGet套件`→安裝 `Furion`。
+
 右鍵 `Furion.Web.Entry`→`管理NuGet套件`→安裝 `Microsoft.EntityFrameworkCore.Tools`。
 
 ### 重建解決方案
@@ -83,7 +84,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/013.png)
 
-於 `Furion.Web.Core` 新增一類別, 命名為 `FurionWebCoreStartup.cs`，並依S下方指示修改 `Startup.cs` 與 `FurionWebCoreStartup.cs` ：
+於 `Furion.Web.Core` 新增一類別, 命名為 `FurionWebCoreStartup.cs`，並依下方指示修改 `Startup.cs` 與 `FurionWebCoreStartup.cs` ：
 
 * Furion.Web.Entry\Startp.cs
 
@@ -112,7 +113,7 @@ namespace Furion.Web.Entry
 }
 ```
 
-* Furion.Web.Core/FurionWebCoreStartup.cs
+* Furion.Web.Core\FurionWebCoreStartup.cs
 
 ```c#
 using Microsoft.AspNetCore.Builder;
@@ -165,11 +166,11 @@ namespace Furion.Web.Core
 
 在 `Furion.EntityFramework.Core` 新建檔案 `FurDbcontext.cs` 和 `dbsetting.json`。
 
-`dbsetting.json`結構描述設定為https://json.schemastore.org/appsetting
+`dbsetting.json` 結構描述設定為 https://json.schemastore.org/appsetting
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/014.png)
 
-*Furion.EntityFramework.Core/dbsetting.json*
+* Furion.EntityFramework.Core\dbsetting.json
 
 ```c#
 {
@@ -179,7 +180,7 @@ namespace Furion.Web.Core
 }
 ```
 
-*Furion.EntityFramework.Core/FurDbcontext*
+* Furion.EntityFramework.Core\FurDbcontext.cs
 
 ```c#
 using Furion.DatabaseAccessor;
@@ -202,7 +203,7 @@ namespace Furion.EntityFramework.Core
 
 Furion.EntityFramework.Core建新檔`FurionEntityFrameworkCoreStartup.cs`
 
-*Furion.EntityFramework.Core/FurionEntityFrameworkCoreStartup*
+*Furion.EntityFramework.Core\FurionEntityFrameworkCoreStartup*
 
 ```c#
 using Furion.DatabaseAccessor;
@@ -230,7 +231,7 @@ namespace Furion.EntityFramework.Core
 
 ### 資料庫上下文定位器
 
-*Furion.Core/FurDbContextLocator.cs*
+*Furion.Core\FurDbContextLocator.cs*
 
 ```
 using Furion.DatabaseAccessor;
@@ -266,7 +267,7 @@ namespace Furion.Core
 
 Furion.Application新增`AppService.cs`
 
-*Furion.Application/AppService.cs*
+*Furion.Application\AppService.cs*
 
 ```c#
 using Furion.Core;
