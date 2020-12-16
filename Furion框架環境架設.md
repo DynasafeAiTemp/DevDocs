@@ -4,7 +4,7 @@
 
 以 Visual Studio 建立一空白方案。
 
-![001.png (1025×630) (raw.githubusercontent.com)](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/001.png)
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/001.png)
 
 新增五個類別庫，分別為：
 * `Furion.Application`
@@ -13,32 +13,34 @@
 * `Furion.EntityFramework.Core`
 * `Furion.Web.Core`
 
-![002.png (1366×768) (raw.githubusercontent.com)](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/002.png)
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/002.png)
 
-![003.png (1025×630) (raw.githubusercontent.com)](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/003.png)
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/003.png)
 
 建立後刪除附加的 `.cs` 檔。
 
-![004.png (261×292) (raw.githubusercontent.com)](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/004.png)
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/004.png)
 
 再新增一 `ASP.NET Core Web應用程式` 專案。
 
-![005.png (1025×630) (raw.githubusercontent.com)](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/005.png)
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/005.png)
 
 命名為 `Furion.Web.Entry`，選擇 `MVC架構`。
 
-![006.png (926×555) (raw.githubusercontent.com)](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/006.png)
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/006.png)
 
 點擊各個專案並將版本改為 `net5.0`
 
-![007]()
+![007](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/007.png)
 
-![008]()
+![008](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/008.png)
 
 解決方案&rarr;右鍵&rarr;**重建方案**
 右鍵 `Furion.Application `加入專案參考，增加 `Furion.Core`
 
-![009]()
+![009](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/010.png)
+
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/011.png)
 
 其餘專案參考如下：
 
