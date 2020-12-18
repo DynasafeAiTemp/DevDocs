@@ -168,7 +168,7 @@ namespace Furion.Web.Core
 
 `dbsetting.json` 結構描述設定為 https://json.schemastore.org/appsetting
 
-![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/014.png)
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/014.jpg)
 
 dbsetting.json右鍵→屬性→複製到輸出目錄→更新時複製
 
