@@ -255,7 +255,7 @@ namespace Furion.Core
 
 3. `工具`→`NuGet套件管理員`→`套件管理器主控台`→預設專案設定為`Furion.Core`。
 
-4. 輸入 `&"C:\Users\user\source\repos\Furion_demo\Furion.Core\tools\cli.ps1"`（cli.ps1之完整路徑位置）。
+4. 輸入 `&"C:\Users\user\source\repos\Furion_demo\Furion.Core\tools\cli.ps1"`（`cli.ps1` 之完整路徑位置）。
 
 5. 輸入 G→`選擇連接字串`→`加載數據庫和視圖`→`選擇資料庫`→`立即生成`→選擇 `Entity` 資料夾。
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/016.png)
