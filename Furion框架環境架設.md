@@ -351,3 +351,137 @@ namespace Furion.Application
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/021.png)
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/022.png)
+
+其餘基本資訊的標註：
+
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/023.png)
+
+### Swagger 輸入優化
+
+`新增`：
+
+因 `Furion` 預設之新增資料的界面輸入不順暢，因此修改新增功能的程式碼。
+
+```csharp
+        /// <summary>
+        /// 增加一條
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <param name="name"></param>
+        /// <param name="amount"></param>
+        /// <param name="detail"></param>
+        /// <param name="price"></param>
+        /// <returns></returns>
+        public void ADD([Required][FromHeader] int Id, [FromHeader] string name, [FromHeader] string amount, [FromHeader] string detail, [FromHeader] string price)
+        {
+            var AAAAA = new Aaaaa();
+            AAAAA.CId = Id;
+            AAAAA.Name = name;
+            AAAAA.Amount = amount;
+            AAAAA.Detail = detail;
+            AAAAA.Price = price;
+            _repository.InsertNow(AAAAA);
+        }
+```
+
+`更新`：
+
+```csharp
+        /// <summary>
+        /// 更新一條
+        /// </summary>
+        public async Task Update([Required][FromHeader] int CId, [FromHeader] string Name, [FromHeader] string Amount, [FromHeader] string Detail, [FromHeader] string Price)
+        {
+            await _repository.SqlNonQueryAsync("UPDATE Aaaaa SET Name = '" + Name + "', Amount= '" + Amount + "', Detail= '" + Detail + "', Price ='" + Price + "' WHERE C_Id = '" + CId + "';");} //SQL語法
+
+```
+
+`以 ID 查詢`：
+
+```csharp
+        /// <summary>
+        /// ID查詢
+        /// </summary>
+        /// <param name="id"></param>
+        public async Task<Aaaaa> Find(int id)
+        {
+            var person = await _repository.FindAsync(id);
+            return person.Adapt<Aaaaa>();
+        }
+```
+
+`條件查詢`：
+
+```csharp
+        /// <summary>
+        /// 條件查詢
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="detail"></param>
+        /// <returns></returns>
+        public async Task<List<Aaaaa>> Search([FromQuery] string name, [FromQuery] string detail) //可更改查詢的條件
+        {
+            var aaaaas = _repository.Where(u => u.Name.Contains(name), u => u.Detail.Contains(detail));
+            return await aaaaas.ToListAsync();
+        }
+```
+
+### Logging
+
+於 `Furion.Core` 層安裝 `Furion.Extras.Logging.Serilog` 套件。
+
+`Furion.Web.Entry/Program.cs` 中插入 `UseSerilogDefault()`。
+
+![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/024.png)
+
+>  如需客製化寫入可參考 `Serilog` 相關配置設定。
+
+替換 `Furion.Web.Entry*/*appsetting.json` 預設 Log 内容：
+
+找出以下程式碼區塊
+
+```csharp
+"Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information",
+      "Microsoft.EntityFrameworkCore": "Information"
+    }
+  }
+```
+
+替換為
+
+```csharp
+"Serilog": {
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "System": "Warning",
+        "Microsoft": "Warning",
+        "Microsoft.Hosting.Lifetime": "Information",
+        "Microsoft.EntityFrameworkCore": "Information"
+      }
+    }
+  }
+```
+
+在 `FurionWebCoreStartup.cs` 加入 `app.UseSerilogRequestLogging();`。
+
+> 必須在 `UseStaticFiles` 和 `UseRouting` 之間。
+
+之後便會自動記錄日誌及下載日誌檔於 `./Furion.Web.Entry/logs` 內。
+
+### 簡易日誌寫入
+
+依照以下範例，在任意處插入：
+
+```csharp
+"百小僧 新增了一条记录".LogInformation<HomeController>();
+
+"程序出现异常啦".LogError<HomeController>();
+
+"这是自定义类别日志".LogInformation("类别");
+```
+
