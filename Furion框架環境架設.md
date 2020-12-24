@@ -276,7 +276,7 @@ namespace Furion.Core
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/016.png)
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/017.png)
 
-生成後腳本會自動在` Entity` 資料夾內生成 `.cs` 檔。
+生成後腳本會自動在 `Entity` 資料夾內生成 `.cs` 檔。
 
 確認無誤後重建方案。
 
