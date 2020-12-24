@@ -2,20 +2,20 @@
 
 > [**.NET 5 | Furion 資料庫連接**](#net-5-|-furion-資料庫連接)
 >
-> * [架設Furion環境](#架設furion環境)
->   * [重建解決方案](#重建解決方案)
-> * [連接資料庫](#連接資料庫)
->   * [配置連接字串](#配置連接字串)
->   * [AppStartup配置](#appstartup配置)
->   * [資料庫上下文定位器](#資料庫上下文定位器)
->   * [資料庫生成模型](#資料庫生成模型)
->   * [數據庫操作基本設定](#數據庫操作基本設定)
->   * [Swagger版面設計](#swagger版面設計)
->   * [Swagger 輸入優化](#swagger-輸入優化)
->   * [Logging](#logging)
->   * [簡易日誌寫入](#簡易日誌寫入)
+>   * [架設 Furion 環境](#架設-furion-環境)
+>     * [重建解決方案](#重建解決方案)
+>   * [連接資料庫](#連接資料庫)
+>     * [配置連接字串](#配置連接字串)
+>     * [AppStartup 配置](#appstartup-配置)
+>     * [資料庫上下文定位器](#資料庫上下文定位器)
+>     * [資料庫生成模型](#資料庫生成模型)
+>     * [數據庫操作基本設定](#數據庫操作基本設定)
+>     * [Swagger 版面設計](#swagger-版面設計)
+>     * [Swagger 輸入優化](#swagger-輸入優化)
+>     * [Logging 寫入](#logging-寫入)
+>     * [簡易日誌寫入](#簡易日誌寫入)
 
-## 架設Furion環境
+## 架設 Furion 環境
 
 以 Visual Studio 建立一空白方案。
 
@@ -216,7 +216,7 @@ namespace Furion.EntityFramework.Core
 ```
 確認無誤後重建方案。
 
-### AppStartup配置
+### AppStartup 配置
 
 `Furion.EntityFramework.Core` 建新檔 `FurionEntityFrameworkCoreStartup.cs`。
 
@@ -359,7 +359,7 @@ namespace Furion.Application
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/020.png)
 
-### Swagger版面設計
+### Swagger 版面設計
 
 * `Furion.Application` 新增 `app.json`
 
@@ -441,7 +441,7 @@ namespace Furion.Application
         }
 ```
 
-### Logging
+### Logging 寫入
 
 於 `Furion.Core` 層安裝 `Furion.Extras.Logging.Serilog` 套件。
 
