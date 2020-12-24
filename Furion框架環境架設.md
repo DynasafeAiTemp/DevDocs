@@ -430,13 +430,13 @@ namespace Furion.Application
 
 於 `Furion.Core` 層安裝 `Furion.Extras.Logging.Serilog` 套件。
 
-`Furion.Web.Entry/Program.cs` 中插入 `UseSerilogDefault()`。
+`Furion.Web.Entry\Program.cs` 中插入 `UseSerilogDefault()`。
 
 ![](https://raw.githubusercontent.com/DynasafeAiTemp/DevDocs/main/Images/Furion資料庫連接操作手冊/024.png)
 
 >  如需客製化寫入可參考 `Serilog` 相關配置設定。
 
-替換 `Furion.Web.Entry*/*appsetting.json` 預設 Log 内容：
+替換 `Furion.Web.Entry*\*appsetting.json` 預設 Log 内容：
 
 找出以下程式碼區塊
 
@@ -471,7 +471,7 @@ namespace Furion.Application
 
 > 必須在 `UseStaticFiles` 和 `UseRouting` 之間。
 
-之後便會自動記錄日誌及下載日誌檔於 `./Furion.Web.Entry/logs` 內。
+之後便會自動記錄日誌及下載日誌檔於 `.\Furion.Web.Entry\logs` 內。
 
 ### 簡易日誌寫入
 
