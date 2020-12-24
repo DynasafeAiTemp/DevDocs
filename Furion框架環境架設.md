@@ -235,7 +235,7 @@ namespace Furion.EntityFramework.Core
 
 * Furion.Core\FurDbContextLocator.cs
 
-```
+```csharp
 using Furion.DatabaseAccessor;
 
 namespace Furion.Core
