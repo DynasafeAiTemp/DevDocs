@@ -1,4 +1,4 @@
-# 【.NET 5 | Furion】資料庫連接
+# .NET 5 | Furion 資料庫連接
 
 ## 架設Furion環境
 
